@@ -1,0 +1,70 @@
+#BorderPane
+{
+    -fx-background-color: yellow;
+    -fx-padding: 10;
+    -fx-border-color: black;
+}
+
+#TopBarButtons
+{
+    -fx-background-color: red;
+    -fx-padding: 10;
+    -fx-margin: 10;
+    -fx-font-weight: bold;
+}
+
+#ZoomSlider
+{
+    -fx-background-color: gray;
+    -fx-show-tick-labels: true;
+    -fx-show-tick-marks: true;
+    -fx-padding: 10;
+    -fx-margin: 10;
+    -fx-border-color: black;
+}
+
+#TimerSpeedSlider
+{
+    -fx-background-color: gray;
+    -fx-show-tick-labels: true;
+    -fx-show-tick-marks: true;
+    -fx-padding: 0, 100, 0, 0;
+    -fx-border-color: black;
+}
+
+#ScrollPane
+{
+    -fx-background-color: orange;
+    -fx-padding: 10;
+    -fx-border-color: black;
+}
+
+#GridPane
+{
+     -fx-background-color: gray;
+     -fx-padding: 10;
+}
+
+#AliveCellButton
+ {
+     -fx-background-color: green;
+     -fx-border-color: transparent;
+     -fx-padding-left: 1;
+     -fx-padding-right: 1;
+     -fx-padding-top: 1;
+     -fx-padding-bottom: 1;
+     -fx-background-radius: 0;
+     -fx-border-radius: 0;
+ }
+
+#DeadCellButton
+{
+    -fx-background-color: red;
+    -fx-border-color: transparent;
+    -fx-padding-left: 1;
+    -fx-padding-right: 1;
+    -fx-padding-top: 1;
+    -fx-padding-bottom: 1;
+    -fx-background-radius: 0;
+    -fx-border-radius: 0;
+}
