@@ -32,30 +32,31 @@ public class HandleMouseEvents implements EventHandler<MouseEvent>
 		TextFields textFields = new TextFields();
 
 		if(mouseEvent.getSource().equals(TopButtonBar.rowTextField) &&
-				textFields.isRowInputCorrect() == true)
+				TopButtonBar.rowTextField.getText().isEmpty() == false &&
+				textFields.isRowInputCorrect() == false)
 		{
 			System.out.println("Row Text Field Event Is triggered");
 
-			TopButtonBar.rowTextField.setText(null);
+			TopButtonBar.rowTextField.setText("");
 			System.out.println("Text: " + TopButtonBar.rowTextField.getText());
 
 			Alert errorAlert = new Alert(Alert.AlertType.ERROR);
 			errorAlert.setHeaderText(null);
-			errorAlert.setContentText("The size is too BIG. Use number < 1000");
+			errorAlert.setContentText("The size is too BIG. Use number > 8 and < 1000");
 			errorAlert.showAndWait();
 		}
 
-		if(mouseEvent.getSource().equals(TopButtonBar.columnTextField) &&
-				textFields.isColumnInputCorrect() == true)
+		if(mouseEvent.getSource().equals(TopButtonBar.columnTextField) && // Select the correct Textfield
+				TopButtonBar.columnTextField.getText().isEmpty() == false && // Make sure it is not empty
+				textFields.isColumnInputCorrect() == false) // Validate the input, if it returns false then clear Textfield
 		{
-			System.out.println("Row Text Field Event Is triggered");
+			System.out.println("Column Text Field  triggered");
 
-			TopButtonBar.columnTextField.setText(null);
-			System.out.println("Text: " + TopButtonBar.columnTextField.getText());
+			TopButtonBar.columnTextField.setText("");
 
 			Alert errorAlert = new Alert(Alert.AlertType.ERROR);
 			errorAlert.setHeaderText(null);
-			errorAlert.setContentText("The size is too BIG. Use number < 1000");
+			errorAlert.setContentText("The size is too BIG. Use number > 8 and < 1000");
 			errorAlert.showAndWait();
 		}
     }

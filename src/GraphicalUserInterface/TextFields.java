@@ -24,6 +24,7 @@ public class TextFields {
 		row.setMaxWidth(textFieldWidthSize);
 		row.setText("12");
 		row.setOnMouseExited(handleMouseEvents);
+		row.setOnMouseMoved(handleMouseEvents);
 
 		return row;
 	}
@@ -42,6 +43,7 @@ public class TextFields {
 		column.setMaxWidth(textFieldWidthSize);
 		column.setText("12");
 		column.setOnMouseExited(handleMouseEvents);
+		column.setOnMouseMoved(handleMouseEvents);
 
 		return column;
 	}
@@ -59,14 +61,13 @@ public class TextFields {
 
 		if (rowNumber > 8 && rowNumber < 1000)
 		{
-			isInputCorrect = false;
+			isInputCorrect = true;
 		}else
 		{
-			isInputCorrect = true;
+			isInputCorrect = false;
 		}
 
 		return isInputCorrect;
-
 	}
 
 	public boolean isColumnInputCorrect()
@@ -83,10 +84,10 @@ public class TextFields {
 
 		if (columnNumber > 8 && columnNumber < 1000)
 		{
-			isInputCorrect = false;
+			isInputCorrect = true;
 		}else
 		{
-			isInputCorrect = true;
+			isInputCorrect = false;
 		}
 
 		return isInputCorrect;
