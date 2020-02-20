@@ -22,7 +22,7 @@ public class TextFields {
 		HandleMouseEvents handleMouseEvents = new HandleMouseEvents();
 		row = new TextField();
 		row.setMaxWidth(textFieldWidthSize);
-		row.setText("12");
+		row.setText("123");
 		row.setOnMouseExited(handleMouseEvents);
 		row.setOnMouseMoved(handleMouseEvents);
 
@@ -41,7 +41,7 @@ public class TextFields {
 		HandleMouseEvents handleMouseEvents = new HandleMouseEvents();
 		column = new TextField();
 		column.setMaxWidth(textFieldWidthSize);
-		column.setText("12");
+		column.setText("123");
 		column.setOnMouseExited(handleMouseEvents);
 		column.setOnMouseMoved(handleMouseEvents);
 

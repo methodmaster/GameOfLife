@@ -50,7 +50,7 @@ public class HandleMouseEvents implements EventHandler<MouseEvent>
 				TopButtonBar.columnTextField.getText().isEmpty() == false && // Make sure it is not empty
 				textFields.isColumnInputCorrect() == false) // Validate the input, if it returns false then clear Textfield
 		{
-			System.out.println("Column Text Field  triggered");
+			System.out.println("Column Text Field Event Is triggered");
 
 			TopButtonBar.columnTextField.setText("");
 
