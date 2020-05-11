@@ -47,6 +47,13 @@ public class ApplyRules
                             row,column);
                 }
 
+                // Corner Top Left
+                if (row == 0 && column == 0)
+                {
+                    aliveNumber = getAliveNeighborsNumber_Corner_TopLeft(gridArray,
+                            row,column);
+                }
+
                 // Rules for Conway's Game of Life
                 if (gridArray[row][column] == ALIVE
                         && aliveNumber < 2)
@@ -279,5 +286,63 @@ public class ApplyRules
         }
 
         return  aliveNumber;
+    }
+
+    private static int getAliveNeighborsNumber_Corner_TopLeft(int[][] array,
+                                                              int currentCellRowIndex,
+                                                              int currentCellColumnIndex)
+    {
+        int aliveNumber = 0;
+        int edgeCell = (array.length - 1);
+
+        // Neighbor Cell 1
+        if (array[edgeCell][edgeCell] == 1)
+        {
+            aliveNumber = aliveNumber + 1;
+        }
+
+        // Neighbor Cell 2
+        if(array[edgeCell][currentCellColumnIndex] == 1)
+        {
+            aliveNumber = aliveNumber + 1;
+        }
+
+        // Neighbor Cell 3
+        if (array[edgeCell][currentCellColumnIndex + 1] == 1)
+        {
+            aliveNumber = aliveNumber + 1;
+        }
+
+        // Neighbor Cell 4
+        if (array[currentCellRowIndex][edgeCell] == 1)
+        {
+            aliveNumber = aliveNumber + 1;
+        }
+
+        // Neighbor Cell 5
+        if (array[currentCellRowIndex][currentCellColumnIndex + 1] == 1)
+        {
+            aliveNumber = aliveNumber + 1;
+        }
+
+        // Neighbor Cell 6
+        if (array[currentCellRowIndex + 1][edgeCell] == 1)
+        {
+            aliveNumber = aliveNumber + 1;
+        }
+
+        // Neighbor Cell 7
+        if (array[currentCellRowIndex + 1][currentCellColumnIndex] == 1)
+        {
+            aliveNumber = aliveNumber + 1;
+        }
+
+        // Neighbor Cell 8
+        if (array[currentCellRowIndex + 1][currentCellColumnIndex + 1] == 1)
+        {
+            aliveNumber = aliveNumber + 1;
+        }
+
+        return aliveNumber;
     }
 }
