@@ -9,10 +9,8 @@ import javafx.application.Platform;
 public class ControlTimer implements ActionListener
 {
 	static Timer timer;
-	private static int timerSpeed = 200;
-	
-	
-    	
+	static int timerSpeed = 500;
+
     public void startTimer()
     {
     	System.out.println("Timer is started.");
@@ -32,7 +30,6 @@ public class ControlTimer implements ActionListener
     
     public void setTimerSpeed(int timerSpeed)
     {
-    	timerSpeed = 1000;
     	timerSpeed = ControlTimer.timerSpeed;
     }
     
@@ -54,10 +51,7 @@ public class ControlTimer implements ActionListener
     	{
             public void run() 
             {
-              ApplyRules applyRules = new ApplyRules();
-              Window.gridArray = applyRules.Rules(Window.gridArray);
-              DrawGrid.DrawThisArray(Window.gridArray);
-              Window.scrollPane.setContent(DrawGrid.Draw());
+              Window.reDrawGrid();
             }
        });
 	}

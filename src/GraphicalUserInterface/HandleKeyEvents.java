@@ -16,7 +16,7 @@ public class HandleKeyEvents implements EventHandler<KeyEvent>
                 (keyEvent.getCode().equals(UP)))
         {
             HandleMouseEvents.cellButtonSize = Window.zoomSlider.getValue();
-            Window.scrollPane.setContent(DrawGrid.Draw());
+            Window.reDrawGrid();
             System.out.println("ZOOM IN (UP) arrow key pressed.");
         }
 
@@ -24,7 +24,7 @@ public class HandleKeyEvents implements EventHandler<KeyEvent>
                 keyEvent.getCode().equals(DOWN))
         {
             HandleMouseEvents.cellButtonSize = Window.zoomSlider.getValue();
-            Window.scrollPane.setContent(DrawGrid.Draw());
+            Window.reDrawGrid();
             System.out.println("ZOOM OUT (DOWN) arrow key pressed.");
         }
 

@@ -14,11 +14,9 @@ public class HandleButtonsEvents implements EventHandler<ActionEvent>
 		if (event.getSource().equals(TopButtonBar.startButtonLocal) == true)
         {
             System.out.println("Start pressed.");
-            //controlTimer.setTimerSpeed(1000);
+            controlTimer.setTimerSpeed(100);
             controlTimer.startTimer();
-            
-            ControlTimer controlTime = new ControlTimer();
-            controlTime.render();
+            Window.reDrawGrid();
             
             TopButtonBar.startButtonLocal.setDisable(true);
             TopButtonBar.pauseButton.setDisable(false);

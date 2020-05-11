@@ -12,7 +12,7 @@ public class HandleMouseEvents implements EventHandler<MouseEvent>
     {
     	if(mouseEvent.getSource().equals(Window.zoomSlider))
     	{
-    		Window.scrollPane.setContent(DrawGrid.Draw());
+    		Window.reDrawGrid();
     	}
     	
     	if(mouseEvent.getSource().equals(Window.timerSpeedSlider) == true)
@@ -31,9 +31,9 @@ public class HandleMouseEvents implements EventHandler<MouseEvent>
 
 		TextFields textFields = new TextFields();
 
-		if(mouseEvent.getSource().equals(TopButtonBar.rowTextField) &&
-				TopButtonBar.rowTextField.getText().isEmpty() == false &&
-				textFields.isRowInputCorrect() == false)
+		if(mouseEvent.getSource().equals(TopButtonBar.rowTextField) && // Select the correct Textfield
+				TopButtonBar.rowTextField.getText().isEmpty() == false && // Make sure it is not empty
+				textFields.isRowInputCorrect() == false) // Validate the input, if it returns false then clear Textfield
 		{
 			System.out.println("Row Text Field Event Is triggered");
 

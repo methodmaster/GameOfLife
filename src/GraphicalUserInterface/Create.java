@@ -11,7 +11,7 @@ public class Create
         rowNumber = numberOfRows;
         columnNumber = numberOfColumns;
 
-        int gridArray[][] = new int[columnNumber][rowNumber];
+        int gridArray[][] = new int[numberOfRows][numberOfColumns];
         
         Create create = new Create();
         
@@ -20,7 +20,7 @@ public class Create
         return gridArray;
     }
     
-    public int [][] randomlyPopulateArray(int gridArray[][])
+    private int [][] randomlyPopulateArray(int gridArray[][])
     {
         Random generateRandomNumber = new Random();
         int cellNumber;
